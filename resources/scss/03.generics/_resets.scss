@@ -1,0 +1,19 @@
+* {
+	margin          : 0;
+	padding         : 0;
+	vertical-align  : baseline;
+	outline         : none;
+	background      : transparent;
+	border          : none;
+	text-decoration : none;
+	border-style    : solid;
+	border-width    : 0;
+	box-sizing      : border-box;
+}
+
+html {
+	font-size:   16px;
+	font-family: var( --font-family-primary );
+	line-height: 1.75;
+	color:       var( --color-primary );
+}

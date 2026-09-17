@@ -1,0 +1,27 @@
+
+.widget-area {
+    grid-column: 2;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+    align-self: start;
+
+    .widget-title {
+        color: #000000;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 48rem) {
+    .site-content {
+        grid-template-columns: 1fr;
+    }
+
+    .content-area,
+    .widget-area {
+        grid-column: 1;
+    }
+}

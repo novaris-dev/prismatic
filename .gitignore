@@ -1,0 +1,9 @@
+node_modules
+storage/*
+!storage/.gitkeep
+user/*
+!user/.gitkeep
+vendor
+
+.env
+.env.local
