@@ -1,12 +1,12 @@
-# Amicable
+# Prismatic
 
-Amicable is the default theme for the Novaris Content Management System. It provides a clean starting point for building websites powered by the Novaris Framework.
+Prismatic is a theme for the Novaris Content Management System. It provides a clean and flexible starting point for building websites powered by the Novaris Framework.
 
 ## About
 
-Amicable is designed to demonstrate the standard structure and features of a Novaris theme while remaining simple enough to customize for your own project.
+Prismatic is designed to demonstrate the standard structure and features of a Novaris theme while providing a simple foundation that can be customized for your own project.
 
-When using the standard Novaris starter application, Amicable is the default configured theme. If the theme is not installed, Novaris can automatically retrieve and install the appropriate release.
+Prismatic follows the standard Novaris theme structure and can be installed and managed through the Novaris theme system.
 
 ## Requirements
 
@@ -16,10 +16,10 @@ When using the standard Novaris starter application, Amicable is the default con
 
 ## Theme Structure
 
-A packaged Amicable theme uses the following structure:
+A packaged Prismatic theme uses the following structure:
 
 ```text
-amicable/
+prismatic/
 ├── app/
 ├── public/
 ├── user/
@@ -44,10 +44,10 @@ Contains metadata about the theme, including its name, slug, version, and reposi
 
 ```json
 {
-    "name": "Amicable",
-    "slug": "amicable",
+    "name": "Prismatic",
+    "slug": "prismatic",
     "version": "0.0.1",
-    "repository": "novaris-dev/amicable"
+    "repository": "novaris-dev/prismatic"
 }
 ```
 
@@ -66,11 +66,11 @@ Build the theme:
 npm run build
 ```
 
-The build process creates the distributable `amicable/` directory containing the files required by Novaris.
+The build process creates the distributable `prismatic/` directory containing the files required by Novaris.
 
 ## Releases
 
-Amicable releases follow semantic versioning.
+Prismatic releases follow semantic versioning.
 
 Before publishing a new release, update the version in `theme.json`.
 
@@ -91,18 +91,18 @@ Release packages use the following naming convention:
 For example:
 
 ```text
-amicable.0.0.1.zip
-amicable.0.0.2.zip
+prismatic.0.0.1.zip
+prismatic.0.0.2.zip
 ```
 
 ## Novaris
 
-Amicable is built for the Novaris Content Management System and Novaris Framework.
+Prismatic is built for the Novaris Content Management System and Novaris Framework.
 
 - Novaris: `novaris-dev/novaris`
 - Framework: `novaris-dev/framework`
-- Amicable: `novaris-dev/amicable`
+- Prismatic: `novaris-dev/prismatic`
 
 ## License
 
-Amicable is licensed under the GNU General Public License v2.0 or later.
+Prismatic is licensed under the GNU General Public License v2.0 or later.
