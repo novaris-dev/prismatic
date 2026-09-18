@@ -1,0 +1,26 @@
+.widget {
+    border-radius: 0.625rem;
+    border: 1px dotted #0b5e79;
+    padding: 1.125rem;
+    margin-top: 1.125rem;
+
+    &:first-child {
+        margin-top: 0;
+    }
+
+    .widget-title {
+        margin: 0;  
+        padding: 0;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

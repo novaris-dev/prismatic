@@ -4,8 +4,10 @@
         <?= $engine->each( 'entry.collection', $collection, 'entry' ) ?>
     </main>
     <aside id="secondary" class="widget-area">
-        <h2 class="widget-title">Sidebar</h2>
-        <p>This is the sidebar content.</p>
+        <?= $engine->categories() ?>
+        <?= $engine->archives() ?>
+        <?= $engine->recent_posts() ?>
     </aside>
+
 </section>
-<?php $engine->include( 'footer' ); ?>
+<?php $engine->include( 'footer' ); ?>  

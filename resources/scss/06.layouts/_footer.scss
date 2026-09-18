@@ -5,7 +5,16 @@
     text-align: center;
 
     .site-info {
-        color: #959595;
-        line-height: 1.8em;
+        color: #ffffff;
+        line-height: 1.5rem;
+
+        a {
+            color: #ffffff;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }   
+        }
     }
 }

@@ -10,5 +10,10 @@
             </div>
         </article>
 	</main>
+    <aside id="secondary" class="widget-area">
+        <?= $engine->categories() ?>
+        <?= $engine->archives() ?>
+        <?= $engine->recent_posts() ?>
+    </aside>
 </section>
 <?php $engine->include( 'footer' ); ?>

@@ -5,4 +5,11 @@
     margin: 0;
     padding: 0;
     min-width: 0;
+
+    .post {
+
+        border-radius: 0.625rem;
+        border: 1px dotted #0b5e79;
+        padding: 1.125rem;
+    }
 }

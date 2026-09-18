@@ -20,6 +20,7 @@ return [
 	'post' => [
 		'path'       => 'blog',
 		'collection' => [ 'order' => 'desc' ],
+		'date_archives' => true,
 	],
 	'category' => [
 		'path'            => 'category',
