@@ -1,4 +1,3 @@
-<?php $engine->include( 'header' ); ?>
 <section id="content" class="site-content">
 	<main id="main" class="content-area">
         <article id="" class="post">
@@ -16,4 +15,3 @@
         <?= $engine->recent_posts() ?>
     </aside>
 </section>
-<?php $engine->include( 'footer' ); ?>
