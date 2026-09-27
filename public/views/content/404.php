@@ -1,14 +1,12 @@
-<?php $engine->include( 'header' ) ?>
 <section id="content" class="site-content">
 	<main id="main" class="content-area">
-		<article id="" class="post">
-		<header class="entry-header">
-			<h1 class="entry-title"><?= e( $single ->title() ); ?></h1>
+		<article id="" class="<?= e( post_class() ); ?>">
+		<header class="entry__-header">
+			<h1 class="entry__title"><?= e( $error ->title() ); ?></h1>
 		</header>
-		<div class="entry-content">
-			<?= $single->content() ?>
+		<div class="entry__content">
+			<?= $error->content() ?>
 		</div>
 		</article>
 	</main>
 </section>
-<?php $engine->include( 'footer' ) ?>

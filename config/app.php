@@ -53,4 +53,21 @@ return [
 	'proxies' => [],
 
 	'private' => true,
+
+	'supports' => [
+		'feaure-image' => [
+			'sizes' => [
+				'prismatic-landscape-medium' => [
+					'width'  => 640,
+					'height' => 360,
+					'crop'   => true,
+				],
+				'prismatic-landscape-large' => [
+					'width'  => 896,
+					'height' => 504,
+					'crop'   => true,
+				],
+			]
+		]
+	]
 ];

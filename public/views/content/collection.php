@@ -1,6 +1,6 @@
 <section id="content" class="site-content">
     <main id="main" class="content-area">
-        <?= $engine->each( 'entry.collection', $collection, 'entry' ) ?>
+        <?= $engine->each( 'entry.collection', $entries, 'entry' ) ?>
     </main>
     <aside id="secondary" class="widget-area">
         <?= $engine->categories() ?>
