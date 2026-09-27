@@ -5,19 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="profile" href="https://gmpg.org/xfn/11" />
 <link rel="stylesheet" href="<?= e( asset( 'resources/scss/screen.scss' ) ) ?>" />
-<?php Novaris\Font\fonts(); ?>
+<?= $doctitle->render(); ?>
+<?= Novaris\Font\fonts(); ?>
 </head>
-<body>
-<div id="container" class="site-container">
-	<header id="masthead" class="site-header">
-		<div class="branding-navigation">
-			<div class="site-branding">
+<body class="<?= e( body_class() ) ?>">
+<?= $engine->doctype() ?>	
+<div id="container" class="app">
+	<header id="masthead" class="app__header">
+		<div class="app__header-inner">
+			<div class="branding">
 				<?php Novaris\Theme\Site\display_site_title(); ?>
 				<?php if ( config( 'app.tagline' ) ) { ?>
-					<span class="sep" aria-hidden="true">&middot;</span>
-					<?php Novaris\Theme\Site\display_site_description();
-				} ?>
+					<span class="branding__separator" aria-hidden="true">&middot;</span>
+					<?php Novaris\Theme\Site\display_site_description(); ?>
+				<?php } ?>
 			</div>
-			<?= $engine->include( 'menu.primary' ); ?> 
+			<?= $engine->include( 'menu.primary' ) ?>
 		</div>
 	</header>
