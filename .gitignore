@@ -1,9 +1,3 @@
 node_modules
-storage/*
-!storage/.gitkeep
-user/*
-!user/.gitkeep
+public/assets
 vendor
-
-.env
-.env.local
