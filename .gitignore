@@ -1,8 +1,9 @@
-/node_modules/
-/public/assets/
-/storage/
-/vendor/
+node_modules
+public
+vendor
 
-/public/manifest.json
+# Theme export (npm run build)
+prismatic/
+
 .env
-.env.local  
+.env.local

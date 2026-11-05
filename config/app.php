@@ -25,7 +25,7 @@ return [
 	'tagline' => 'A Novaris Theme',
 
 	// URL to the site.
-	'uri' => env( 'APP_URL' ),
+	'url' => env( 'APP_URL' ),
 
 	// Select from a list of supported timezones:
 	// https://www.php.net/manual/en/timezones.php
@@ -55,8 +55,13 @@ return [
 	'private' => true,
 
 	'supports' => [
-		'feaure-image' => [
+		'featured-image' => [
 			'sizes' => [
+				'post-thumbnail' => [
+					'width'  => 178,
+					'height' => 100,
+					'crop'   => true,
+				],
 				'prismatic-landscape-medium' => [
 					'width'  => 640,
 					'height' => 360,
@@ -67,7 +72,12 @@ return [
 					'height' => 504,
 					'crop'   => true,
 				],
-			]
-		]
-	]
+				'prismatic-landscape-extra-large' => [
+					'width'  => 1366,
+					'height' => 768,
+					'crop'   => true,
+				],
+			],
+		],
+	],
 ];

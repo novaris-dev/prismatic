@@ -1,11 +1,11 @@
 <section id="content" class="site-content">
-    <main id="main" class="content-area">
-        <?= $engine->each( 'entry.collection', $entries, 'entry' ) ?>
-    </main>
-    <aside id="secondary" class="widget-area">
-        <?= $engine->categories() ?>
-        <?= $engine->archives() ?>
-        <?= $engine->recent_posts() ?>
-    </aside>
-
+	<main id="main" class="content-area">
+		<?php $engine->each( 'entry.collection', $entries, 'entry' ); ?>
+		<?= $engine->includeWhen( $pagination, 'menu.pagination' ); ?>
+	</main>
+	<aside id="secondary" class="widget-area">
+		<?= $engine->categories() ?>
+		<?= $engine->archives() ?>
+		<?= $engine->recent_posts() ?>
+	</aside>
 </section>

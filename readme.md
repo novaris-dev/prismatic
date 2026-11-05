@@ -10,7 +10,7 @@ Prismatic follows the standard Novaris theme structure and can be installed and 
 
 ## Requirements
 
-- PHP 8.0 or later
+- PHP 8.2 or later
 - Novaris Framework
 - Node.js and npm for theme development
 

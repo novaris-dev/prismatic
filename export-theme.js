@@ -19,12 +19,14 @@ const exportPath = 'prismatic'; // folder to export into
 // root-level files to include
 const files = [
   'theme.json',
-];
+]; 
 
 // folders to include
 const folders = [
   'app',
-  'public',
+  'config',
+  'public/assets',
+  'resources',
 ];
 
 // items to delete after copy (same cleanup as your old script, adjusted for Vite)
@@ -57,6 +59,20 @@ async function copyDirIfExists(src, dest) {
   }
 }
 
+async function stripPrivateFlag(file) {
+  if (!(await exists(file))) return;
+
+  const source  = await fsp.readFile(file, 'utf8');
+  const updated = source.replace(/^[ \t]*'private'[ \t]*=>[^\n]*\n/m, '');
+
+  if (updated === source) {
+    console.warn(`⚠️  No 'private' key found in ${file}`);
+    return;
+  }
+
+  await fsp.writeFile(file, updated);
+}
+
 async function main() {
   // 1) start clean
   await rimraf(exportPath);
@@ -79,6 +95,9 @@ async function main() {
   for (const p of removeAfterCopy) {
     await rimraf(p);
   }
+
+  // 5) Don't ship the dev-only `'private' => true` in the theme.
+  await stripPrivateFlag(path.join(exportPath, 'config', 'app.php'));
 
   console.log(`✅ Export complete → ${exportPath}`);
 }

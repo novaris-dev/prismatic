@@ -1,6 +1,6 @@
 {
-    "name": "novaris-dev/novaris",
-    "description": "The core foundation of the Novaris Content Management System (CMS), providing a robust and flexible architecture designed to power dynamic content-driven websites.",
+    "name": "novaris-dev/prismatic",
+    "description": "Prismatic is a theme for the Novaris Content Management System, providing a clean and flexible starting point for your site.",
     "license": "GPL-2.0-or-later",
     "version": "1.0.0",
     "authors": [
@@ -8,14 +8,18 @@
             "name": "Benjamin Lu"
         }
     ],
-	"autoload"    : {
-		"psr-4" : {
-			"App\\" : "app"
-		}
-	},
-    "require": {
-        "novaris-dev/framework": "dev-develop"
+    "autoload": {
+        "psr-4": {
+            "App\\": "app"
+        }
     },
-	"minimum-stability": "dev",
-	"prefer-stable": true
+    "require": {
+        "php": ">=8.2",
+        "novaris-dev/framework": "^1.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "scripts": {
+        "novaris": "php vendor/novaris-dev/framework/src/bin/novaris"
+    }
 }
