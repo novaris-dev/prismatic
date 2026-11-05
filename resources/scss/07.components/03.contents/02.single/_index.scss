@@ -1,10 +1,10 @@
 @use '../../../01.settings/06.fonts' as fonts;
 
 .content-area {    
-	line-height: 1.8rem;
+	line-height: 2rem;
 
 	.entry {
-		margin-top: 3rem;
+		margin-top: 1.25rem;
 
 		&:first-child {
 			margin-top: 0;
@@ -23,6 +23,10 @@
 			a {
 				color: var( --color-heading );
 				text-decoration: none;
+
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
@@ -54,7 +58,11 @@
 		&__content {
 			margin: 1rem auto;
 			max-width: 640px;
-		}	
+
+			> :last-child {
+				margin-bottom: 0;
+			}
+		}
 
 		&__more-link {
 			font-size: 14px;
