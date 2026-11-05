@@ -9,13 +9,15 @@
 /// @link   https://luthemes.com/portfolio/prismatic
 ////
 
+@use '01.settings/06.fonts' as fonts;
+
 // -----------------------------------------------------------------------------
 // Import settings.
 // -----------------------------------------------------------------------------
 //
 // Settings handle the configuration and variables.
 
-@forward '01.settings/__index';
+@forward '01.settings';
 
 // -----------------------------------------------------------------------------
 // Import tools.
@@ -24,7 +26,7 @@
 // These are used throughout the code but don't output CSS on their own. Things
 // like functions, mixins, and extensions go here.
 
-@forward '02.tools/__index';
+@forward '02.tools';
 
 // -----------------------------------------------------------------------------
 // Import generic styles.
@@ -34,7 +36,7 @@
 // fonts, etc. are best handled here. These are the base styles that other
 // styles will build upon.
 
-@forward '03.generics/__index';
+@forward '03.generics';
 
 // -----------------------------------------------------------------------------
 // Import element styles.
@@ -44,7 +46,7 @@
 // The styles in this folder should only handle the defaults. More specific
 // styles should be handled later in the cascade.
 
-@forward '04.elements/__index';
+@forward '04.elements';
 
 // -----------------------------------------------------------------------------
 // Import object styles.
@@ -52,7 +54,7 @@
 //
 // Undecorated design patterns.
 
-@forward '05.objects/__index';
+@forward '05.objects';
 
 // -----------------------------------------------------------------------------
 // Import layout styles.
@@ -60,7 +62,7 @@
 //
 // global layouts.
 
-@forward '06.layouts/__index';
+@forward '06.layouts';
 
 // -----------------------------------------------------------------------------
 // Import component styles.
@@ -70,7 +72,7 @@
 // fonts, etc. are best handled here. These are the base styles that other
 // styles will build upon.
 
-@forward '07.components/__index';
+@forward '07.components';
 
 // -----------------------------------------------------------------------------
 // Import utility styles.
@@ -80,4 +82,70 @@
 // necessary, this is the only place where `!important` rules should go, but
 // only if necessary.
 
-@forward '08.utilities/__index';
+@forward '08.utilities';
+
+.breadcrumbs {
+	font-size     : 0.875rem;
+	margin-bottom : 1.5rem;
+
+	&-list {
+		align-items : center;
+		display     : flex;
+		flex-wrap   : wrap;
+		gap         : 0;
+		list-style  : none;
+		margin      : 0;
+		padding     : 0;
+	}
+
+	&-item {
+		align-items : center;
+		display     : flex;
+
+		& + &::before {
+			content : "/";
+			margin  : 0 0.5rem;
+			opacity : 0.5;
+		}
+
+		a {
+			color           : inherit;
+			text-decoration : none;
+
+			&:hover,
+			&:focus {
+				text-decoration : underline;
+			}
+		}
+
+		&[aria-current="page"] {
+			opacity : 0.7;
+		}
+	}
+}
+
+blockquote {
+	border-left  : 0.25rem solid currentColor;
+	font-family  : fonts.font-family( 'primary' );
+	font-size    : 1.125rem;
+	font-style   : italic;
+	line-height  : 1.6;
+	margin       : 1.5rem 0;
+	padding      : 0.5rem 0 0.5rem 1.5rem;
+
+	p:last-child {
+		margin-bottom : 0;
+	}
+
+	cite {
+		display     : block;
+		font-size   : 0.875rem;
+		font-style  : normal;
+		font-weight : 600;
+		margin-top  : 0.75rem;
+	}
+}
+
+q {
+	font-style : italic;
+}

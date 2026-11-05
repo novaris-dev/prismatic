@@ -6,6 +6,7 @@
 		<section class="archive-content">
 			<?= $archive->content(); ?>
 		</section>
-		<?php $engine->each( 'entry.archive', $entries, 'entry' ) ?>
+		<?= $engine->each( 'entry.archive', $entries, 'entry' ) ?>
+		<?= $engine->includeWhen( $pagination, 'menu.pagination' ); ?>
 	</main>
 </section>

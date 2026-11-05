@@ -1,0 +1,20 @@
+.app-footer {
+    background: var( --color-primary );
+    border-top: 0.063rem solid var( --color-divider );
+    padding: 0.5rem;
+    text-align: center;
+
+    .app-footer__credit {
+        color: var( --color-white );
+        line-height: 1.5rem;
+
+        a {
+            color: var( --color-white );
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }   
+        }
+    }
+}

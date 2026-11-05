@@ -1,6 +1,6 @@
 <section id="content" class="site-content">
 	<main id="main" class="content-area">
-        <article id="" class="post">
+        <article class="<?= e( post_class() ) ?>">
             <header class="entry-header">
                 <h1 class="entry-title"><?= e( $page->title() ); ?></h1>
             </header>
@@ -9,9 +9,9 @@
             </div>
         </article>
 	</main>
-    <aside id="secondary" class="widget-area">
-        <?= $engine->categories() ?>
-        <?= $engine->archives() ?>
-        <?= $engine->recent_posts() ?>
-    </aside>
+	<aside id="secondary" class="widget-area">
+		<?= $engine->categories() ?>
+		<?= $engine->archives() ?>
+		<?= $engine->recent_posts() ?>
+	</aside>
 </section>
